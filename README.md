@@ -4,18 +4,16 @@
 
 ![Project Banner](https://img.shields.io/badge/Health%20Tech-IoT%20%2B%20ML-blue?style=for-the-badge)
 ![Accuracy](https://img.shields.io/badge/ML%20Accuracy-94.2%25-success?style=for-the-badge)
-![Cost](https://img.shields.io/badge/Total%20Cost-%2448-green?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
 **Real-time Attack Prevention • IoT + XGBoost ML • 10x More Affordable**
 
-[📹 Video Demo](#) • [📄 Full Report](#) • [🌐 Live Dashboard](#)
 
 </div>
 
 ---
 
-## 🎯 Overview
+##  Overview
 
 An affordable IoT-based predictive monitoring system that **forecasts asthma and COPD attacks 15-30 minutes before onset**. Built to address the global healthcare crisis where 300 million patients lack access to real-time respiratory monitoring.
 
@@ -26,7 +24,7 @@ An affordable IoT-based predictive monitoring system that **forecasts asthma and
 - Commercial devices cost $500-$3000 (inaccessible)
 
 ### Our Solution
-A **$48 medical-grade system** that:
+A **$20 medical-grade system** that:
 - ✅ Predicts attacks before symptoms appear
 - ✅ Monitors both vitals + environmental triggers
 - ✅ Responds in < 10ms to critical conditions
@@ -35,7 +33,7 @@ A **$48 medical-grade system** that:
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 ```
 ┌─────────────────┐   WiFi/JSON   ┌─────────────────┐   HTTP/REST   ┌─────────────────┐
 │  HARDWARE       │   Every 4s    │  BACKEND        │   Real-time   │  FRONTEND       │
@@ -54,7 +52,7 @@ A **$48 medical-grade system** that:
 
 ## ✨ Key Features
 
-### 🔬 **Medical-Grade Sensors**
+###  **Medical-Grade Sensors**
 | Sensor | Measures | Medical Justification | Cost |
 |--------|----------|----------------------|------|
 | MAX30102 | Heart Rate, SpO2 | SpO2 < 92% = severe hypoxia (WHO) | $5 |
@@ -62,14 +60,14 @@ A **$48 medical-grade system** that:
 | DHT22 | Temp, Humidity | Cold air < 15°C triggers 73% of patients | $3 |
 | ESP32 | Processing, WiFi | Dual-core 240MHz for local ML | $6 |
 
-### 🤖 **Machine Learning**
+###  **Machine Learning**
 - **Algorithm**: XGBoost (gradient boosting)
 - **Accuracy**: 94.2% on test data
 - **False Negatives**: Only 1.75% (critical for safety)
 - **Inference Speed**: < 50ms (real-time capable)
 - **Dataset**: 20,000 samples based on WHO, EPA, peer-reviewed research
 
-### 🛡️ **Two-Layer Safety Architecture**
+###  **Two-Layer Safety Architecture**
 1. **Local Threshold Checking** (ESP32)
    - Response time: < 10ms
    - Works offline
@@ -84,7 +82,7 @@ A **$48 medical-grade system** that:
 
 ---
 
-## 📊 Performance Metrics
+##  Performance Metrics
 
 | Metric | Result |
 |--------|--------|
@@ -93,12 +91,12 @@ A **$48 medical-grade system** that:
 | Local Alert Response | < 10ms |
 | End-to-End Latency | 255ms (worst case) |
 | Battery Life | 12-15 hours |
-| Total Cost | $48 |
+| Total Cost | $20 |
 | Cost vs Commercial | 10x cheaper |
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 **Hardware**
 - ESP32 (Arduino C++)
@@ -124,13 +122,11 @@ A **$48 medical-grade system** that:
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 ```
 asthma-monitoring/
-├── hardware/
-│   ├── esp32_firmware/          # Arduino code for ESP32
-│   ├── pcb_design/              # EasyEDA schematic + layout
-│   └── sensor_calibration/      # Calibration procedures
+├── esp32_code/
+│   ├── iot_health_final.ino/          # Arduino code for ESP32
 ├── backend/
 │   ├── app/
 │   │   ├── main.py              # FastAPI application
@@ -157,7 +153,7 @@ asthma-monitoring/
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - Python 3.11+
@@ -191,23 +187,21 @@ Open `http://localhost:3000` in browser
 
 ---
 
-## 🎬 Live Demo
+## Demo
 
 ### Normal Conditions
-![Normal Dashboard](link-to-screenshot)
 - All vitals in safe range
 - Green LED indicator
 - Dashboard shows "Low Risk"
 
 ### Critical Alert (Pollution Trigger)
-![Critical Alert](link-to-screenshot)
-- Air quality spikes to 2.7 MQ
+- Air quality spikes
 - Red LED + buzzer activate
 - Dashboard shows "CRITICAL - Move to fresh air"
 
 ---
 
-## 📈 Results
+##  Results
 
 ### Confusion Matrix
 ```
@@ -225,16 +219,16 @@ High      22     48     1250
 
 ---
 
-## 🌍 Impact Potential
+##  Impact Potential
 
 If deployed to **1% of Pakistan's asthma patients**:
-- 🛡️ 100,000 patients protected
-- ❤️ 365 deaths prevented annually
-- 💰 $50M+ saved in hospital costs
+-  100,000 patients protected
+-  365 deaths prevented annually
+-  $50M+ saved in hospital costs
 
 ---
 
-## 🏆 Achievements
+## Achievements
 
 - ✅ 94.2% ML prediction accuracy
 - ✅ Custom PCB fabricated using traditional methods
@@ -245,16 +239,16 @@ If deployed to **1% of Pakistan's asthma patients**:
 
 ---
 
-## 📚 Technical Documentation
+## Technical Documentation
 
 - [Full Project Report](docs/report.pdf) (30 pages)
 - [ML Model Training](backend/app/ml/train_model.py)
 - [Dataset Generation](backend/app/ml/dataset.py)
-- [PCB Fabrication Guide](hardware/pcb_design/README.md)
+
 
 ---
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - [ ] Mobile apps (iOS + Android)
 - [ ] Cloud deployment (AWS/Azure)
@@ -266,21 +260,21 @@ If deployed to **1% of Pakistan's asthma patients**:
 
 ---
 
-## 👥 Team
+## Team
 
-**[Your Name]** - Hardware + Firmware + Integration  
-**[Teammate 2]** - ML Model + Backend Development  
-**[Teammate 3]** - Frontend + UI/UX Design  
+**[Mahad Umar Qaisrani]** 
+**[Aleena Zia]** - ML Model + Backend Development  
+**[Fatima Masood]** - Frontend + UI/UX Design  
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Medical thresholds based on WHO Emergency Care Guidelines
 - Air quality standards from EPA
@@ -289,13 +283,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 📞 Contact
+## Contact
 
 For questions, collaboration, or deployment inquiries:
 
-- 📧 Email: [your-email@example.com]
-- 💼 LinkedIn: [Your LinkedIn Profile]
-- 🌐 Portfolio: [Your Portfolio]
+- 📧 Email: [mahadumarqaisrani4@gmail.com]
+- 💼 LinkedIn: [https://www.linkedin.com/in/mahad-umar-661714321/]
 
 ---
 
@@ -306,6 +299,5 @@ For questions, collaboration, or deployment inquiries:
 Made with ❤️ for saving lives through accessible healthcare technology
 
 </div>
-```
 
 ---
